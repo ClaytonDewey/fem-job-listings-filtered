@@ -1,0 +1,11 @@
+@use '../util/' as *;
+
+.header {
+  height: rem(156);
+  margin-bottom: rem(56);
+  background: var(--primary) url(../images/bg-header-mobile.svg);
+
+  @include breakpoint(small) {
+    background-image: url(../images/bg-header-desktop.svg);
+  }
+}

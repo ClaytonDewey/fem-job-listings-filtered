@@ -1,0 +1,45 @@
+@use '../util/' as *;
+
+.flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: rem(8);
+  height: rem(24);
+  border-radius: rem(12);
+  color: var(--white);
+  font-size: rem(14);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.108px;
+
+  &--new {
+    background-color: var(--primary);
+  }
+
+  &--featured {
+    background-color: var(--xtra-dark);
+  }
+
+  &:not(:last-child) {
+    margin-right: rem(8);
+  }
+}
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: rem(10);
+  height: rem(32);
+  border-radius: 4px;
+  background: var(--background);
+  color: var(--primary);
+  transition: var(--transition);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--primary);
+    color: var(--white);
+  }
+}
