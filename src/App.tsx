@@ -1,4 +1,4 @@
-import { Card, Footer } from './components';
+import { Card, Filter, Footer } from './components';
 // import data from '../data.json';
 import data from '../data.ts';
 
@@ -9,15 +9,12 @@ function App() {
       <main className='container'>
         <div className='card card--filter'>
           <div className='card__filters'>
-            <div className='tag'>
-              HTML
-              <span className='close'>
-                <img src='./images/icon-remove.svg' alt='clear' />
-              </span>
-            </div>
+            <Filter name='HTML' />
+            <Filter name='CSS' />
+            <Filter name='JavaScript' />
           </div>
           <div className='card__button'>
-            <button>clear</button>
+            <button>Clear</button>
           </div>
         </div>
         {data.map((job) => {

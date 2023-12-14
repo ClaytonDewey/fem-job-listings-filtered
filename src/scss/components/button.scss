@@ -1,6 +1,18 @@
 @use '../util/' as *;
 
 button {
-  // border: none;
+  border: none;
   background-color: transparent;
+  color: var(--light-text);
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: rem(24); /* 150% */
+  letter-spacing: -0.123px;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--primary);
+  }
 }
