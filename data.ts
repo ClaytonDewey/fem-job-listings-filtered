@@ -1,5 +1,4 @@
 const t = new Date().getHours();
-console.log(t);
 
 const data = [
   {

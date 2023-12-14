@@ -14,6 +14,7 @@ type CardProps = {
   location: string;
   languages: string[];
   tools: string[];
+  addFilter: (e: string) => void;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -29,8 +30,14 @@ const Card: React.FC<CardProps> = ({
   location,
   languages,
   tools,
+  addFilter,
 }) => {
-  const tags: string[] = languages.concat(role, level, tools);
+  const tagArray: string[] = [];
+  const tags: string[] = tagArray.concat(role, level, languages, tools);
+
+  const handleClick = (e: string) => {
+    addFilter(e);
+  };
 
   return (
     <div className={`card ${newJob ? 'card--new' : ''}`}>
@@ -53,7 +60,7 @@ const Card: React.FC<CardProps> = ({
       {/* Role */}
       <div className='card__tags'>
         {tags.map((tag, i) => {
-          return <Tag key={i} name={tag} />;
+          return <Tag addFilter={handleClick} key={i} name={tag} />;
         })}
       </div>
       {/* Item End */}

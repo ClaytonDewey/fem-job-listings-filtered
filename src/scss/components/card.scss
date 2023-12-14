@@ -10,6 +10,11 @@
   background-color: var(--white);
   box-shadow: var(--box-shadow);
 
+  &--new {
+    padding-left: rem(19);
+    border-left: 5px solid var(--primary);
+  }
+
   &--featured {
     padding-left: rem(19);
     border-left: 5px solid var(--primary);
@@ -19,6 +24,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: rem(-36);
+    margin-bottom: rem(60);
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16);
   }
 
   &__image {
@@ -148,7 +161,6 @@
 
     &--new {
       padding-left: rem(35);
-      border-left: 5px solid var(--primary);
     }
   }
 }

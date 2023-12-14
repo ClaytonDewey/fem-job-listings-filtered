@@ -1,14 +1,14 @@
 import React from 'react';
 
-type FilterProps = { name: string };
+type FilterProps = { name: string; removeFilter: (e: string) => void };
 
-const Filter: React.FC<FilterProps> = ({ name }) => {
+const Filter: React.FC<FilterProps> = ({ name, removeFilter }) => {
+  const handleClick = (e) => {
+    removeFilter(e.target.textContent);
+  };
   return (
-    <div className='tag tag--filter'>
+    <div onClick={handleClick} className='tag tag--filter'>
       {name}
-      <span>
-        <img src='./images/icon-remove.svg' alt='clear' />
-      </span>
     </div>
   );
 };

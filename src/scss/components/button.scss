@@ -1,18 +1,33 @@
 @use '../util/' as *;
 
-button {
+.btn {
   border: none;
   background-color: transparent;
   color: var(--light-text);
-  font-size: rem(16);
+  font-size: inherit;
   font-style: normal;
-  font-weight: 700;
+  font-weight: inherit;
   line-height: rem(24); /* 150% */
   letter-spacing: -0.123px;
   cursor: pointer;
   transition: var(--transition);
 
-  &:hover {
-    color: var(--primary);
+  &__clear {
+    &::after {
+      content: '';
+      margin-top: rem(-4);
+      width: 0;
+      height: 1px;
+      display: block;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      color: var(--primary);
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }

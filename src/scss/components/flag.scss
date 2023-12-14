@@ -2,7 +2,7 @@
 
 .flag {
   display: inline-flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   padding-inline: rem(8);
   height: rem(24);
@@ -12,6 +12,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.108px;
+  line-height: rem(27);
 
   &--new {
     background-color: var(--primary);
@@ -30,7 +31,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-inline: rem(10);
+  padding-inline: rem(8);
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: rem(24);
+  letter-spacing: -0.123px;
   height: rem(32);
   border-radius: 4px;
   background: var(--background);
@@ -48,13 +53,17 @@
     justify-content: space-between;
     padding-right: 0;
 
-    span {
+    &::after {
+      content: '';
       display: flex;
       justify-content: center;
       margin-left: rem(10);
       align-items: center;
       height: rem(32);
       width: rem(32);
+      background-image: url(/../images/icon-remove.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
       background-color: var(--primary);
       transition: var(--transition);
     }
@@ -62,7 +71,7 @@
     &:hover {
       background: var(--background);
       color: var(--primary);
-      span {
+      &::after {
         background-color: var(--xtra-dark);
       }
     }
