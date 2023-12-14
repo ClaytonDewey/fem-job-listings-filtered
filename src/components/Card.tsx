@@ -7,14 +7,11 @@ type CardProps = {
   newJob: boolean;
   featured: boolean;
   position: string;
-  role: string;
-  level: string;
   postedAt: number;
   contract: string;
   location: string;
-  languages: string[];
-  tools: string[];
   addFilter: (e: string) => void;
+  tags: string[];
 };
 
 const Card: React.FC<CardProps> = ({
@@ -23,18 +20,12 @@ const Card: React.FC<CardProps> = ({
   newJob,
   featured,
   position,
-  role,
-  level,
   postedAt,
   contract,
   location,
-  languages,
-  tools,
   addFilter,
+  tags,
 }) => {
-  const tagArray: string[] = [];
-  const tags: string[] = tagArray.concat(role, level, languages, tools);
-
   const handleClick = (e: string) => {
     addFilter(e);
   };

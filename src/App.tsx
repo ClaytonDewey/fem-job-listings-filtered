@@ -68,6 +68,9 @@ function App() {
             languages,
             tools,
           } = job;
+          const tagArray: string[] = [];
+          const tags: string[] = tagArray.concat(role, level, languages, tools);
+
           return (
             <Card
               key={id}
@@ -76,13 +79,10 @@ function App() {
               newJob={newJob}
               featured={featured}
               position={position}
-              role={role}
-              level={level}
               postedAt={postedAt}
               contract={contract}
               location={location}
-              languages={languages}
-              tools={tools}
+              tags={tags}
               addFilter={handleAddFilter}
             />
           );
