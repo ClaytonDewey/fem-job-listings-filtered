@@ -12,6 +12,7 @@ type CardProps = {
   location: string;
   addFilter: (e: string) => void;
   tags: string[];
+  displayStatus: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -25,13 +26,17 @@ const Card: React.FC<CardProps> = ({
   location,
   addFilter,
   tags,
+  displayStatus,
 }) => {
   const handleClick = (e: string) => {
     addFilter(e);
   };
 
   return (
-    <div className={`card ${newJob ? 'card--new' : ''}`}>
+    <div
+      className={`card ${newJob ? 'card--new' : ''} ${
+        displayStatus ? 'hide' : ''
+      }`}>
       {/* Item Start */}
       <img src={logo} alt={company} className='card__image' />
 

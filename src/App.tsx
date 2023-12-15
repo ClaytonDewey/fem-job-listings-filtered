@@ -71,6 +71,10 @@ function App() {
           const tagArray: string[] = [];
           const tags: string[] = tagArray.concat(role, level, languages, tools);
 
+          const set1 = new Set(tags);
+          const commonItems = filters.filter((item) => !set1.has(item));
+          const displayStatus = commonItems.length > 0;
+          console.log(displayStatus);
           return (
             <Card
               key={id}
@@ -84,6 +88,7 @@ function App() {
               location={location}
               tags={tags}
               addFilter={handleAddFilter}
+              displayStatus={displayStatus}
             />
           );
         })}
