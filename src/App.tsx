@@ -31,8 +31,9 @@ function App() {
 
   return (
     <>
-      <header
-        className={`header ${filters.length ? '' : 'no-filter'}`}></header>
+      <header className={`header ${filters.length ? '' : 'no-filter'}`}>
+        <h1 className='sr-only'>Job Listings Page</h1>
+      </header>
       <main className='container'>
         {filters.length > 0 && (
           <div className='card card--filter'>

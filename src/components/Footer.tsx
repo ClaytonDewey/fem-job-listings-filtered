@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className='attribution'>
+    <footer className='attribution'>
       Challenge by{' '}
       <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
         Frontend Mentor
@@ -10,7 +10,7 @@ const Footer = () => {
         Clayton Dewey
       </a>
       .
-    </div>
+    </footer>
   );
 };
 
