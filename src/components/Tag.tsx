@@ -7,7 +7,7 @@ type TagProps = {
 
 const Tag: React.FC<TagProps> = ({ name, addFilter }) => {
   return (
-    <button onClick={() => addFilter(name)} className='btn tag'>
+    <button type='button' onClick={() => addFilter(name)} className='btn tag'>
       {name}
     </button>
   );
