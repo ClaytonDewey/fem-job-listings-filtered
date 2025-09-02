@@ -1,6 +1,7 @@
 {
   "name": "fem-job-listings-filtered",
   "private": true,
+  "homepage": "https://claytondewey.github.io/fem-job-listings-filtered/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
