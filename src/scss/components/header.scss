@@ -2,14 +2,14 @@
 
 .header {
   height: rem(156);
-  background: var(--primary) url(./images/bg-header-mobile.svg);
+  background: var(--primary) url(/images/bg-header-mobile.svg);
 
   &.no-filter {
     margin-bottom: rem(56);
   }
 
   @include breakpoint(small) {
-    background-image: url(./images/bg-header-desktop.svg);
+    background-image: url(/images/bg-header-desktop.svg);
 
     &.no-filter {
       margin-bottom: rem(76);
